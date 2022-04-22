@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\ASP</_PublishTargetUrl>
+    <History>True|2021-12-01T04:43:48.6107440Z;True|2021-12-01T11:26:59.5634760+07:00;True|2021-12-01T11:12:18.6611083+07:00;True|2021-12-01T10:44:29.2696393+07:00;True|2021-12-01T09:30:56.3641867+07:00;True|2021-11-30T10:10:00.6708770+07:00;False|2021-11-30T10:09:31.9333551+07:00;False|2021-11-30T10:08:55.0369422+07:00;True|2021-11-30T10:05:40.6030128+07:00;True|2021-11-30T10:05:30.5060047+07:00;True|2021-11-29T17:05:04.9304911+07:00;True|2021-11-29T16:30:45.8856380+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="template/CTM01_Customer list.xlsx">
+      <publishTime>10/22/2021 13:36:24</publishTime>
+    </File>
+    <File Include="template/ICLS01_Incoming List %28Supplier%29.xlsx">
+      <publishTime>11/11/2021 09:32:00</publishTime>
+    </File>
+    <File Include="template/IDL01_Item data list.xlsx">
+      <publishTime>11/26/2021 11:29:21</publishTime>
+    </File>
+    <File Include="template/IRQM01_Inventory request %28MFG%29.xlsx">
+      <publishTime>11/28/2021 17:42:38</publishTime>
+    </File>
+    <File Include="template/SO01_Sales order.xlsx">
+      <publishTime>11/18/2021 17:21:11</publishTime>
+    </File>
+    <File Include="template/SPL01_Supplier List.xlsx">
+      <publishTime>11/04/2021 11:27:02</publishTime>
+    </File>
+    <File Include="uploads/CTM01_Customer list.xlsx">
+      <publishTime>11/26/2021 13:30:32</publishTime>
+    </File>
+    <File Include="uploads/hieult212_Issue note_20211103 %281%29.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+    <File Include="uploads/ICLM01_Incoming List %28MFG%29.xlsx">
+      <publishTime>11/26/2021 13:58:51</publishTime>
+    </File>
+    <File Include="uploads/ICLS01_Incoming List %28Supplier%29.xlsx">
+      <publishTime>11/29/2021 16:57:16</publishTime>
+    </File>
+    <File Include="uploads/IDL01_Item data list.xlsx">
+      <publishTime>11/26/2021 10:45:36</publishTime>
+    </File>
+    <File Include="uploads/IRQM01_Inventory request %28MFG%29.xlsx">
+      <publishTime>11/28/2021 17:37:37</publishTime>
+    </File>
+    <File Include="uploads/Schedule - enhancement of NMV-Warehouse.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+    <File Include="uploads/SO01_Sales order.xlsx">
+      <publishTime>11/28/2021 19:16:01</publishTime>
+    </File>
+    <File Include="uploads/SPL01_Supplier List.xlsx">
+      <publishTime>11/26/2021 13:30:20</publishTime>
+    </File>
+    <File Include="xlsx/GRN01_Goods received note.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+    <File Include="xlsx/IN01_Issue note.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+    <File Include="xlsx/SO01_Sales order.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+    <File Include="xlsx/SPN01_Shipper note.xlsx">
+      <publishTime>11/22/2021 10:06:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

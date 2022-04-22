@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <title>
+        @ViewData["Title"]
+    </title>
+
+    <!--     Fonts and icons     -->
+    <!-- Nucleo Icons -->
+    <link href="~/assets/css/nucleo-icons.css" rel="stylesheet">
+    <link href="~/assets/css/nucleo-svg.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="~/assets/js/free-v4-font-face.min.css" rel="stylesheet" />
+    <link href="~/assets/js/free-v4-shims.min.css" rel="stylesheet" />
+    <link href="~/assets/js/free.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <!-- CSS Files -->
+    <link id="pagestyle" href="~/assets/css/soft-ui-dashboard.min.css?v=1.0.4" rel="stylesheet">
+
+    <link href="~/assets/datatable/datatables.min.css" rel="stylesheet" />
+</head>
+<body class="g-sidenav-show  bg-gray-100">
+
+
+    <partial name="_DocumentsSideNav" />
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <partial name="_NavBar" />
+        <!-- End Navbar -->
+        <!-- Content -->
+        <div class="container-fluid py-4">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h3 class="mb-0">@ViewData["Title"]</h3>
+                        </div>
+                        <div class="container-fluid d-flex justify-content-center">
+                            <div class="col-11 ">
+                                
+                                <div class="card mt-3">
+                                   @RenderBody()
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <partial name="_Footer" />
+
+        </div>
+    </main>
+
+    <!-- Configurator -->
+    <partial name="_Configurator" />
+    <!--   Core JS Files   -->
+    <script src="~/assets/js/core/popper.min.js"></script>
+    <script src="~/assets/js/core/bootstrap.min.js"></script>
+    <script src="~/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <!-- Kanban scripts -->
+    <script src="~/assets/js/plugins/threejs.js"></script>
+    <script src="~/assets/js/plugins/orbit-controls.js"></script>
+
+
+
+    <!-- Github buttons -->
+    <script async="" defer="" src="~/assets/js/buttons.js"></script>
+
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/assets/js/soft-ui-dashboard.min.js?v=1.0.4"></script>
+    <script>
+        var step = 1;
+        $(document).ready(function () { stepProgress(step); });
+
+        $(".next").on("click", function () {
+
+            if (step < $(".step").length) {
+                $(".step").show();
+                $(".step")
+                    .not(":eq(" + step++ + ")")
+                    .hide();
+                stepProgress(step);
+            }
+            hideButtons(step);
+
+        });
+
+        // ON CLICK BACK BUTTON
+        $(".back").on("click", function () {
+            if (step > 1) {
+                step = step - 2;
+                $(".next").trigger("click");
+            }
+            hideButtons(step);
+        });
+
+        // CALCULATE PROGRESS BAR
+        stepProgress = function (currstep) {
+            var percent = parseFloat(100 / $(".step").length) * currstep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width", percent + "%")
+                .html(percent + "%");
+        };
+
+        // DISPLAY AND HIDE "NEXT", "BACK" AND "SUMBIT" BUTTONS
+        hideButtons = function (step) {
+            var limit = parseInt($(".step").length);
+            $(".action").hide();
+            if (step < limit) {
+                $(".next").show();
+            }
+            if (step > 1) {
+                $(".back").show();
+            }
+            if (step == limit) {
+                $(".next").hide();
+            }
+        };
+
+
+    </script>
+</body>
+
+</html>

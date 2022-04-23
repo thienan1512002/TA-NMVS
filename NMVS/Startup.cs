@@ -28,7 +28,7 @@ namespace NMVS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>
-                (options => options.UseSqlServer(Configuration.GetConnectionString("NmvsConnection")));
+                (options => options.UseSqlServer(Configuration.GetConnectionString("TA-NmvsConnection")));
             services.AddControllersWithViews();
             services.AddHttpClient();
 

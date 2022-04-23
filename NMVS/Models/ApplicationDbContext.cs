@@ -14,6 +14,10 @@ namespace NMVS.Models
 
         }
 
+        public DbSet<GeneralizedCode> GeneralizedCodes { get; set; }
+        public DbSet<ItemData> ItemDatas { get; set; }
+        public DbSet<UploadReport> UploadReports { get; set; }
+        public DbSet<UploadError> UploadErrors { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -34,6 +38,6 @@ namespace NMVS.Models
             });
         }
 
-        
+
     }
 }

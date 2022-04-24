@@ -5,6 +5,18 @@
 
 }
 <div class="card-body">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: bold;
+        }
+
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-family: 'Be Vietnam Pro', sans-serif;
+            
+        }
+    </style>
     <form role="form" id="account" method="post" asp-action="Login" asp-controller="Account">
         <div asp-validation-summary="All" class="text-danger" id="validation-summary"></div>
 
@@ -21,10 +33,10 @@
             <label asp-for="Site" class="control-label"></label>
             @Html.DropDownList("Site", new SelectList(ViewBag.SiteList, "SiCode", "SiDesc"), new {@class = "form-control"} )
             <span asp-validation-for="Site" class="text-danger"></span>
-        </div> *@
+            </div> *@
         <div class="form-check form-switch">
             <input asp-for="RememberMe" class="form-check-input" type="checkbox" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Remember me</label>
+            <label class="form-check-label" for="rememberMe" style=" font-family: 'Be Vietnam Pro', sans-serif;">Remember me</label>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign in</button>

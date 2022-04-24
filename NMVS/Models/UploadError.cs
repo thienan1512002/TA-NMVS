@@ -9,7 +9,7 @@ namespace NMVS.Models
     public partial class UploadError
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public int UploadId { get; set; }

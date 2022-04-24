@@ -9,7 +9,7 @@ namespace NMVS.Models
     public partial class UploadReport
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public DateTime UploadTime { get; set; }
         [MaxLength(100)]

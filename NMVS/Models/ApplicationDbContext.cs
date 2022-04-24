@@ -36,6 +36,11 @@ namespace NMVS.Models
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
             });
+
+            builder.Entity<GeneralizedCode>(genCode =>
+            {
+                genCode.HasNoKey();
+            });
         }
 
 

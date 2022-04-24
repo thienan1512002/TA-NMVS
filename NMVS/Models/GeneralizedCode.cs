@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NMVS.Models
 {
+    
     public partial class GeneralizedCode
     {
         [Required]

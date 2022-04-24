@@ -29,6 +29,7 @@ namespace NMVS
         {
             services.AddDbContext<ApplicationDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("TA-NmvsConnection")));
+            services.AddScoped<IGeneralizedCode, GeneralizedCodeDal>();
             services.AddControllersWithViews();
             services.AddHttpClient();
 
@@ -51,6 +52,10 @@ namespace NMVS
                 opt.Cookie.IsEssential = true;
             }
             );
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
             services.AddHttpContextAccessor();
 
         }

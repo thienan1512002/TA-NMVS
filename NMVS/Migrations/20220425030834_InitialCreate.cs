@@ -54,12 +54,15 @@ namespace NMVS.Migrations
                 name: "GeneralizedCodes",
                 columns: table => new
                 {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     CodeFldName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CodeValue = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CodeDesc = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_GeneralizedCodes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(

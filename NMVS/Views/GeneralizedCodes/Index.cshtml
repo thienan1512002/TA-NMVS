@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Generalized Code";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+       
+        <a asp-action="Create" class="btn btn-primary">Create new</a>
+        <table class="table table-striped" id="tbl_generalized_code">
+            <thead>
+                <tr>
+                    <td>Field Name</td>
+                    <td>Value</td>
+                    <td>Description</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_generalized_code').DataTable({
+            "ajax": {
+                "url": "/GeneralizedCodes/GetAll",
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "CodeFldName" },
+                { "data": "CodeValue" },
+                { "data": "CodeDesc" },
+                {
+                    "data": "Id", "render": (data) => {
+                        return `<a class="btn btn-primary" href="/GeneralizedCodes/Edit/${data}" style="margin-right:10px">Edit</a><button class="btn btn-danger" onClick="showConfirm(${data})">Delete</button>`
+                    }
+                }
+            ]
+        });
+    });
+    function showConfirm(id) {
+        Swal.fire({
+            title: 'Are you sure to delete this code?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = `/GeneralizedCodes/Delete/${id}`;
+            }
+        })
+    }
+</script>

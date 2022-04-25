@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -15,13 +16,26 @@ namespace NMVS.Services
 
         public async Task<bool> Add(GeneralizedCode code)
         {
-            _context.GeneralizedCodes.Add(code);
-            return await _context.SaveChangesAsync() > 0;
+            Boolean result = false;
+            var model = await _context.GeneralizedCodes.FirstOrDefaultAsync(x => x.CodeFldName == code.CodeFldName && x.CodeValue == code.CodeValue);
+            if (model == null)
+            {
+                _context.GeneralizedCodes.Add(code);
+                result = await _context.SaveChangesAsync() > 0;
+            }
+            return result;
         }
 
-        public void Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new System.NotImplementedException();
+            Boolean result = false;
+            var model = await _context.GeneralizedCodes.FirstOrDefaultAsync(x => x.Id == id);
+            if (model != null)
+            {
+                _context.GeneralizedCodes.Remove(model);
+                result = await _context.SaveChangesAsync() > 0;
+            }
+            return result;
         }
 
         public async Task<IEnumerable<GeneralizedCode>> GetAll()
@@ -29,9 +43,21 @@ namespace NMVS.Services
             return await _context.GeneralizedCodes.ToListAsync();
         }
 
-        public bool Update(GeneralizedCode code)
+        public async Task<bool> Update(GeneralizedCode code)
         {
-            throw new System.NotImplementedException();
+            Boolean result = false;
+            var model = await _context.GeneralizedCodes.FirstOrDefaultAsync(x => x.CodeFldName == code.CodeFldName && x.CodeValue == code.CodeValue && x.Id != code.Id);
+            if (model == null)
+            {
+                _context.GeneralizedCodes.Update(code);
+                result = await _context.SaveChangesAsync() > 0;
+            }
+            return result;
+        }
+
+        public async Task<GeneralizedCode> GetById(int id)
+        {
+            return await _context.GeneralizedCodes.FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }

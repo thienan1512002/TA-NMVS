@@ -10,7 +10,7 @@ using NMVS.Models;
 namespace NMVS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220424015533_InitialCreate")]
+    [Migration("20220425030834_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -231,6 +231,11 @@ namespace NMVS.Migrations
 
             modelBuilder.Entity("NMVS.Models.GeneralizedCode", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("CodeDesc")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -245,6 +250,8 @@ namespace NMVS.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("GeneralizedCodes");
                 });

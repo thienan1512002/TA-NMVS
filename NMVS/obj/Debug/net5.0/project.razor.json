@@ -13566,6 +13566,40 @@
         }
       },
       {
+        "HashCode": 1561437480,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__NotyfViewComponentTagHelper",
+        "AssemblyName": "AspNetCoreHero.ToastNotification",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:notyf"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__NotyfViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "Notyf"
+        }
+      },
+      {
+        "HashCode": -2005529243,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__ToastifyViewComponentTagHelper",
+        "AssemblyName": "AspNetCoreHero.ToastNotification",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:toastify"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__ToastifyViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "Toastify"
+        }
+      },
+      {
         "HashCode": 141407075,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -15644,6 +15678,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\GeneralizedCodes\\Edit.cshtml",
+      "TargetPath": "Views\\GeneralizedCodes\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\Documents\\Vehicle.cshtml",
       "TargetPath": "Views\\Documents\\Vehicle.cshtml",
       "FileKind": "mvc"
@@ -15676,6 +15715,11 @@
     {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\Shared\\_Configurator.cshtml",
       "TargetPath": "Views\\Shared\\_Configurator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\GeneralizedCodes\\Create.cshtml",
+      "TargetPath": "Views\\GeneralizedCodes\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15716,6 +15760,11 @@
     {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\Shared\\_DocumentsSideNav.cshtml",
       "TargetPath": "Views\\Shared\\_DocumentsSideNav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\GeneralizedCodes\\Index.cshtml",
+      "TargetPath": "Views\\GeneralizedCodes\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

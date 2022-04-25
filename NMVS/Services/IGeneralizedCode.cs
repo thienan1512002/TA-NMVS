@@ -8,11 +8,11 @@ namespace NMVS.Services
     public interface IGeneralizedCode
     {
         Task<IEnumerable<GeneralizedCode>> GetAll();
-
+        Task<GeneralizedCode> GetById(int id);
         Task<Boolean> Add(GeneralizedCode code);
 
-        Boolean Update(GeneralizedCode code);
+        Task<Boolean> Update(GeneralizedCode code);
 
-        void Delete(int id);
+        Task<Boolean> Delete(int id);
     }
 }

@@ -37,10 +37,6 @@ namespace NMVS.Models
                     .IsRequired();
             });
 
-            builder.Entity<GeneralizedCode>(genCode =>
-            {
-                genCode.HasNoKey();
-            });
         }
 
 

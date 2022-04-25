@@ -24,6 +24,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&family=Space+Mono:ital,wght@1,700&display=swap"
         rel="stylesheet">
+
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script>
         var apiUrl = location.protocol + "//" + location.host;
@@ -66,15 +67,18 @@
     <!-- Kanban scripts -->
     <script src="~/assets/js/plugins/threejs.js"></script>
     <script src="~/assets/js/plugins/orbit-controls.js"></script>
-
-
+    <!--Datatable-->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
     <!-- Github buttons -->
     <script async="" defer="" src="~/assets/js/buttons.js"></script>
 
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="~/assets/js/soft-ui-dashboard.min.js?v=1.0.4"></script>
+    <!--Sweetalert-->
 
+    <script src="~/lib/limonte-sweetalert2/sweetalert2.all.min.js"></script>
+    @await Component.InvokeAsync("Notyf")
 </body>
 
 </html>

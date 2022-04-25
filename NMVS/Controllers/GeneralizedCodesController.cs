@@ -45,8 +45,12 @@ namespace NMVS.Controllers
                     _notyf.Success("Generalized Code Created Successfully", 5);
                     return RedirectToAction("Index");
                 }
+                else
+                {
+                    ViewBag.ErrorMessage = "There are already existing that code named " + code.CodeFldName + " with value " + code.CodeValue;
+                }
             }
-            ViewBag.ErrorMessage = "There are already existing that code named " + code.CodeFldName + " with value " + code.CodeValue;
+
             return View(code);
         }
 

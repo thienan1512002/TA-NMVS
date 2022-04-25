@@ -9,6 +9,11 @@ namespace NMVS.Services
     public class ItemDataDal : InItemData
     {
         private readonly ApplicationDbContext _context;
+        public ItemDataDal(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+       
         public async Task<bool> AddItemData(ItemData itemData)
         {
             Boolean result = false;

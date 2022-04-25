@@ -31,6 +31,7 @@ namespace NMVS
             services.AddDbContext<ApplicationDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("TA-NmvsConnection")));
             services.AddScoped<IGeneralizedCode, GeneralizedCodeDal>();
+            services.AddScoped<InItemData, ItemDataDal>();
             services.AddControllersWithViews();
             services.AddHttpClient();
 

@@ -381,7 +381,7 @@
             @if (User.IsInRole("Handle request"))
             {
             <li class="nav-item nav-item-data">
-                <a class="nav-link nav-item-data" href="/ItemDatas/">
+                <a class="nav-link nav-item-data" asp-action="Index" asp-controller="ItemDatas">
                     <div
                         class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
                         <span class="fa fa-info"></span>

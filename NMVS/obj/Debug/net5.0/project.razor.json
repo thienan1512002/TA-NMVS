@@ -15733,6 +15733,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\ItemDatas\\Index.cshtml",
+      "TargetPath": "Views\\ItemDatas\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\Home\\Dashboard.cshtml",
       "TargetPath": "Views\\Home\\Dashboard.cshtml",
       "FileKind": "mvc"
@@ -15870,6 +15875,11 @@
     {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\Shared\\_SideNav.cshtml",
       "TargetPath": "Views\\Shared\\_SideNav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\ItemDatas\\Create.cshtml",
+      "TargetPath": "Views\\ItemDatas\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

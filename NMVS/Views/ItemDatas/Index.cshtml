@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Item Datas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+
+        <a asp-action="Create" class="btn btn-primary">Create new</a>
+        <table class="table table-striped table-responsive" id="tbl_item_data">
+            <thead>
+                <tr>
+                    <td>Item No</td>
+                    <td>Item Name</td>
+                    <td>Item Type</td>
+                    <td>Item unit package</td>
+                    <td>Item quantity (in 1 package)</td>
+                    <td>Item package</td>
+                    <td>Item wh (for 1 unit)</td>
+                    <td>Status</td>
+                    <td>Flanable</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_item_data').DataTable({
+            "ajax": {
+                "url": "/ItemDatas/GetItemData",
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ItemNo" },
+                { "data": "ItemName" },
+                { "data": "ItemType" },
+                { "data": "ItemUm" },
+                { "data": "ItemPkgQty" },
+                { "data": "ItemPkg" },
+                { "data": "ItemWhUnit" },
+                {
+                    "data": "Active", "render": (data) => {
+                        const button = data ? `<button class="btn btn-danger">Inactive</button>` : `<button class="btn btn-success">Active</button>`;
+                        return button;
+                    }
+                },
+                {
+                    "data": "Flammable", "render": (data) => {
+                        const content = data ? `<span class="badge badge-danger">flammable</span>` : `<span class="badge badge-success">Not flamable</span>`;
+                        return content;
+
+                    }
+                },
+
+            ]
+        });
+    });
+
+</script>

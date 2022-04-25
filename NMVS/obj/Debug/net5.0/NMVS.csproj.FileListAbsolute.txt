@@ -498,3 +498,5 @@ C:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\obj\Debug\net5.0\staticwebassets\
 C:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\obj\Debug\net5.0\Razor\Views\GeneralizedCodes\Create.cshtml.g.cs
 C:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\obj\Debug\net5.0\Razor\Views\GeneralizedCodes\Edit.cshtml.g.cs
 C:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\bin\Debug\net5.0\libman.json
+c:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\obj\Debug\net5.0\Razor\Views\ItemDatas\Index.cshtml.g.cs
+C:\Users\nhta1\OneDrive\Documents\TA-NMVS\NMVS\obj\Debug\net5.0\Razor\Views\ItemDatas\Create.cshtml.g.cs

@@ -1,0 +1,70 @@
+@model NMVS.Models.ItemData
+@{
+    ViewData["Title"] = "Add New Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center" style="margin-top:10px">Create New Code</h3>
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger">
+                        <strong style="color:white">Error! @ViewBag.ErrorMessage</strong>
+
+                    </div>
+                }
+                <form asp-action="Create" method="POST">
+                    <div class="form-group col-4">
+                        <label asp-for="ItemNo" class="control-label"></label>
+                        <input asp-for="ItemNo" class="form-control" />
+                        <span asp-validation-for="ItemNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemName" class="control-label"></label>
+                        <input asp-for="ItemName" class="form-control" />
+                        <span asp-validation-for="ItemName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemType" class="control-label"></label>
+                        <input asp-for="ItemType" class="form-control" />
+                        <span asp-validation-for="ItemType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemUm" class="control-label"></label>
+                        <input asp-for="ItemUm" class="form-control" />
+                        <span asp-validation-for="ItemUm" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemPkgQty" class="control-label"></label>
+                        <input asp-for="ItemPkgQty" class="form-control" />
+                        <span asp-validation-for="ItemPkgQty" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemPkg" class="control-label"></label>
+                        <input asp-for="ItemPkg" class="form-control" />
+                        <span asp-validation-for="ItemPkg" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ItemWhUnit" class="control-label"></label>
+                        <input asp-for="ItemWhUnit" class="form-control" />
+                        <span asp-validation-for="ItemWhUnit" class="text-danger"></span>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="control-label" asp-for="Active"></label>
+                        <input asp-for="Active" class="form-check-input" type="checkbox" value="true" />
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="control-label" asp-for="Flammable"></label>
+                        <input asp-for="Flammable" class="form-check-input" type="checkbox" value="true" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,8 @@ namespace NMVS.Models
     public partial class ItemData
     {
         [Key]
+        public int Id { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string ItemNo { get; set; }

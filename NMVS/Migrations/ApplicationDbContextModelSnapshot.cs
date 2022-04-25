@@ -256,9 +256,10 @@ namespace NMVS.Migrations
 
             modelBuilder.Entity("NMVS.Models.ItemData", b =>
                 {
-                    b.Property<string>("ItemNo")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -270,6 +271,11 @@ namespace NMVS.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ItemNo")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ItemPkg")
                         .HasMaxLength(100)
@@ -290,7 +296,7 @@ namespace NMVS.Migrations
                     b.Property<float>("ItemWhUnit")
                         .HasColumnType("real");
 
-                    b.HasKey("ItemNo");
+                    b.HasKey("Id");
 
                     b.ToTable("ItemDatas");
                 });

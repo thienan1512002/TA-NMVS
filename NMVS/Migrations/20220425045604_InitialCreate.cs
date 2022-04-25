@@ -69,6 +69,8 @@ namespace NMVS.Migrations
                 name: "ItemDatas",
                 columns: table => new
                 {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ItemNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ItemName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     ItemType = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
@@ -81,7 +83,7 @@ namespace NMVS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ItemDatas", x => x.ItemNo);
+                    table.PrimaryKey("PK_ItemDatas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(

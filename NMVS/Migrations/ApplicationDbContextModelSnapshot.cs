@@ -418,11 +418,9 @@ namespace NMVS.Migrations
 
             modelBuilder.Entity("NMVS.Models.UploadError", b =>
                 {
-                    b.HasOne("NMVS.Models.UploadReport", "UploadReport")
+                    b.HasOne("NMVS.Models.UploadReport", null)
                         .WithMany("UploadErrors")
                         .HasForeignKey("UploadReportId");
-
-                    b.Navigation("UploadReport");
                 });
 
             modelBuilder.Entity("NMVS.Models.ApplicationRole", b =>

@@ -1,0 +1,92 @@
+@model NMVS.Models.UploadReport
+@{
+    ViewData["Title"] = "Reports Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="col-mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Details</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <dt class="col-sm-2">Upload Time :</dt>
+                        <dd class="col-sm-10">@Model.UploadTime</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Upload By :</dt>
+                        <dd class="col-sm-10">@Model.UploadBy</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">File Name :</dt>
+                        <dd class="col-sm-10">@Model.FileName</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Upload Function :</dt>
+                        <dd class="col-sm-10">@Model.UploadFunction</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Total Records :</dt>
+                        <dd class="col-sm-10">@Model.TotalRecord</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Inserted :</dt>
+                        <dd class="col-sm-10">@Model.Inserted Records</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Updated :</dt>
+                        <dd class="col-sm-10">@Model.Updated Records</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="col-sm-2">Errors :</dt>
+                        <dd class="col-sm-10">@Model.Errors Records</dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="container-fluid">
+    <div class="col-mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Errors</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.UploadErrors.Count > 0)
+                    {
+                        <table class="table table-striped table-info">
+                            <thead>
+                                <tr>
+                                    <td>No</td>
+                                    <td>Error Name</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var error in Model.UploadErrors)
+                                {
+                                    <tr>
+                                        <td>@error.Id</td>
+                                        <td>@error.Error</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="alert alert-success">
+                            <strong>Info!</strong> No Errors Found.
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

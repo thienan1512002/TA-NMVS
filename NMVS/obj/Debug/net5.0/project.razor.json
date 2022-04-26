@@ -15678,6 +15678,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\ItemDatas\\Edit.cshtml",
+      "TargetPath": "Views\\ItemDatas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\nhta1\\OneDrive\\Documents\\TA-NMVS\\NMVS\\Views\\GeneralizedCodes\\Edit.cshtml",
       "TargetPath": "Views\\GeneralizedCodes\\Edit.cshtml",
       "FileKind": "mvc"

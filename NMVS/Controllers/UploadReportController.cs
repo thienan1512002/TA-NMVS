@@ -32,5 +32,15 @@ namespace NMVS.Controllers
             UploadReport report = await _services.GetReportById(id);
             return View(report);
         }
+        //Testing
+
+        public async Task<ActionResult> Create()
+        {
+            UploadError error = new UploadError();
+            error.UploadId = 1;
+            error.Error = "Demo Error";
+            Boolean result = await _services.AddError(error);
+            return RedirectToAction("Index");
+        }
     }
 }

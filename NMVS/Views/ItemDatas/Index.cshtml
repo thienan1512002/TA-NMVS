@@ -74,22 +74,30 @@
             let itemsData = []
             const name = file.files[0].name
             readXlsxFile(file.files[0]).then((data) => {
-                for (let i = 2; i < data.length; i++) {
-                    const objects = { itemNo: data[i][0], itemName: data[i][1], itemType: data[i][2], itemUm: data[i][3], itemPkgQty: data[i][4], itemPkg: data[i][5], itemWhUnit: data[i][6], active: data[i][7], flamable: data[i][8] };
-                    itemsData.push(objects);
-                    //console.log(objects);
-                }
-                $.ajax({
-                    url: "ItemDatas/CreateByExcel",
-                    method: "POST",
-                    data: { items: itemsData, name: name },
-                    success: (data) => {
-                        $("#tbl_item_data").DataTable().ajax.reload();
+                if (data[0][0] === "Demo Report Excel") {
+                    for (let i = 2; i < data.length; i++) {
+                        const objects = { itemNo: data[i][0], itemName: data[i][1], itemType: data[i][2], itemUm: data[i][3], itemPkgQty: data[i][4], itemPkg: data[i][5], itemWhUnit: data[i][6], active: data[i][7], flamable: data[i][8] };
+                        itemsData.push(objects);
+                        //console.log(objects);
                     }
-                })
-                console.log(itemsData);
+                    $.ajax({
+                        url: "ItemDatas/CreateByExcel",
+                        method: "POST",
+                        data: { items: itemsData, name: name },
+                        success: (data) => {
+                            $("#tbl_item_data").DataTable().ajax.reload();
+                        }
+                    })
+                } else {
+                    Swal.fire(
+                        'Error',
+                        'Wrong excel format , Please try agian',
+                        'error'
+                    )
+                }
+                //console.log(itemsData);
             });
-
+            file.value = null;
         })
     }
 </script>
